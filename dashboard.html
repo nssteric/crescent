@@ -1,0 +1,2069 @@
+<!-- saved from url=(0140)file:///Users/ericnsst/Documents/Eric/%E6%96%B0%E6%9C%88%E9%9B%86/%E6%96%B0%E6%9C%88%E5%89%8D%E7%AB%AF%E6%B8%AC%E8%A9%A6/www/dashboard1.html -->
+<html lang="en" class="no-js">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<link rel="stylesheet" type="text/css" href="./系統範例社區 全方位建築智慧化管理系統_files/toastr.min.css">
+	<script src="./系統範例社區 全方位建築智慧化管理系統_files/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="./系統範例社區 全方位建築智慧化管理系統_files/toastr.min.js"></script>
+	<script src="https://kit.fontawesome.com/755ead39f1.js" crossorigin="anonymous"></script>
+	<style type="text/css">
+		.Dashboard__title {
+			font-size: 20px;
+			line-height: 20px;
+			color: black;
+		}
+
+		.rightLine {
+			background: #333333;
+			width: 1px;
+			height: 19px;
+			line-height: 14px
+		}
+
+		.rightLine45 {
+			background: #00000029;
+			width: 1px;
+			height: 45px;
+			/* line-height: 14px */
+		}
+
+		.dashBoard__left {
+			width: calc(100% - 232px);
+		}
+
+		.motherHouse__top__left {
+			color: #36302D;
+			font-weight: 700;
+		}
+
+		.motherHouse__top__pointGreen {
+			background: green;
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			margin: 7px 4px 0 0;
+		}
+
+		.motherHouse__top__pointGold {
+			background: #9F9128;
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			margin: 7px 4px 0 0;
+		}
+
+		.motherHouse__top__pointRed {
+			background: #CC4747;
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			margin: 6px 4px 0 0;
+		}
+
+		.motherHouse__card {
+			position: relative;
+			min-width: 163px;
+			height: 100px;
+			border-radius: 5px;
+			background: white;
+			margin: 5px 5px 0 0;
+			padding: 10px;
+		}
+
+		.colorBornWeight {
+			color: #653320;
+			font-weight: 700;
+		}
+
+		.motherHouse__card:hover {
+			background: #653320 !important;
+			color: white !important;
+		}
+
+		.motherHouse__card:hover .colorBornWeight {
+			background: #653320 !important;
+			color: white !important;
+		}
+
+		.motherHouse__card__img {
+			position: absolute;
+			content: '';
+			top: 10px;
+			right: 10px;
+			border-radius: 50%;
+			width: 40px;
+			height: 40px;
+			background: #898989;
+			border: #898989;
+		}
+
+		.motherHouse__card__img__statusGood {
+			position: absolute;
+			content: '';
+			top: 2px;
+			right: 2px;
+			border-radius: 50%;
+			width: 10px;
+			height: 10px;
+			background: green;
+		}
+
+		.motherHouse__card__img__statusNormal {
+			position: absolute;
+			content: '';
+			top: 2px;
+			right: 2px;
+			border-radius: 50%;
+			width: 10px;
+			height: 10px;
+			background: #9F9128;
+		}
+
+		.motherHouse__card__img__statusBad {
+			position: absolute;
+			content: '';
+			top: 2px;
+			right: 2px;
+			border-radius: 50%;
+			width: 10px;
+			height: 10px;
+			background: red;
+		}
+
+		.Calendar {
+			padding: 20px;
+			border-radius: 5px;
+			background: white;
+			height: 214px;
+			object-fit: fill;
+		}
+
+		.Calendar__title {
+			color: #653320;
+			font-weight: 700;
+		}
+
+		.OccupancyRate {
+			width: 212px;
+			height: 115px;
+			padding: 11.5px 34px;
+		}
+
+		.OccupancyRate__pointLight {
+			width: 8px;
+			height: 8px;
+			background: #F4F0EA;
+			border-radius: 50%;
+			margin: 7px 7px 0 0;
+		}
+
+		.OccupancyRate__pointDark {
+			width: 8px;
+			height: 8px;
+			background: #653320;
+			border-radius: 50%;
+			margin: 7px 7px 0 0;
+		}
+
+		.OccupancyRate__houseNumber {
+			padding-left: 16px;
+			font-size: 16px;
+			line-height: 16px;
+		}
+
+		.OccupancyRate__today {
+			padding: 12px 8px;
+			border: 1px solid #FFFFFF;
+			border-radius: 5px;
+			background: white;
+			height: 73px;
+			width: 212px;
+		}
+
+		.motherServe {
+			padding: 20px;
+			border: 1px solid #FFFFFF;
+			border-radius: 5px;
+			background: white;
+			height: 312px;
+			width: 212px;
+		}
+
+		.motherServe__title {
+			color: #653320;
+		}
+
+		.motherServe__ul {
+			list-style: none;
+			height: 250px;
+			overflow-Y: auto;
+			padding: 0;
+		}
+
+		.motherServe__type {
+			line-height: 40px;
+		}
+
+		.motherServe__level {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.motherServe__level__height {
+			background: red;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+		}
+
+		.motherServe__level__normal {
+			background: green;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+		}
+
+		.news {
+			padding: 20px;
+			border: 1px solid #FFFFFF;
+			border-radius: 5px;
+			background: white;
+			height: 312px;
+			width: 212px;
+		}
+
+		.news__title {
+			color: #653320;
+			font-weight: 700;
+		}
+
+		.news__Type {
+			border-radius: 5px;
+			color: white;
+			padding: 0 3px;
+		}
+
+		.news__Type__administrative {
+			background: #BC8563;
+		}
+
+		.news__Type__nurse {
+			background: #27BF46;
+		}
+
+		.news__Type__clientServe {
+			background: #2B80FF;
+		}
+
+		.news__Type__theOther {
+			background: #898989;
+		}
+
+		.news__ul {
+			list-style: none;
+			height: 250px;
+			overflow-Y: auto;
+			padding: 0;
+		}
+
+		.news__li {
+			/* width: 170px; */
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+	</style>
+	<link rel="stylesheet" href="./系統範例社區 全方位建築智慧化管理系統_files/bootstrap.min.css"
+		integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+	<link rel="stylesheet" href="crescent.css">
+	<title>
+		新月集月子中心
+	</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<meta content="This is the new iNSST community system." name="description">
+	<meta content="imin" name="author">
+	<meta name="csrf-token" content="S9zSrsqPc2iGq30NCuyW4xGkYCnmLnth7RRPrBlo">
+	<!-- BEGIN GLOBAL MANDATORY STYLES -->
+
+	<link href="./系統範例社區 全方位建築智慧化管理系統_files/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="./系統範例社區 全方位建築智慧化管理系統_files/simple-line-icons.min.css" rel="stylesheet" type="text/css">
+	<link href="./系統範例社區 全方位建築智慧化管理系統_files/bootstrap.min(1).css" rel="stylesheet" type="text/css">
+	<link href="./系統範例社區 全方位建築智慧化管理系統_files/uniform.default.css" rel="stylesheet" type="text/css">
+	<link href="./系統範例社區 全方位建築智慧化管理系統_files/bootstrap-switch.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="./系統範例社區 全方位建築智慧化管理系統_files/toastr.min.css">
+	<!-- END GLOBAL MANDATORY STYLES -->
+	<!-- BEGIN PAGE STYLES -->
+	<!-- END PAGE STYLES -->
+	<!-- BEGIN THEME STYLES -->
+	<link href="./系統範例社區 全方位建築智慧化管理系統_files/components-md.css" id="style_components" rel="stylesheet" type="text/css">
+	<link href="./系統範例社區 全方位建築智慧化管理系統_files/plugins-md.css" rel="stylesheet" type="text/css">
+	<link href="./系統範例社區 全方位建築智慧化管理系統_files/layout.css" rel="stylesheet" type="text/css">
+	<link href="./系統範例社區 全方位建築智慧化管理系統_files/grey.css" rel="stylesheet" type="text/css" id="style_color">
+	<link href="./系統範例社區 全方位建築智慧化管理系統_files/custom.css" rel="stylesheet" type="text/css">
+	<!-- END THEME STYLES -->
+	<link rel="shortcut icon" href="http://192.168.0.212:8080/tmcs/favicon.ico">
+	<style>
+		#preloader {
+			position: fixed;
+			left: 0;
+			top: 0;
+			z-index: 999999;
+			width: 100%;
+			height: 100%;
+			overflow: visible;
+			background: #333 url('http://files.mimoymima.com/images/loading.gif') no-repeat center center;
+		}
+	</style>
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<!-- DOC: Apply "page-header-fixed-mobile" and "page-footer-fixed-mobile" class to body element to force fixed header or footer in mobile devices -->
+<!-- DOC: Apply "page-sidebar-closed" class to the body and "page-sidebar-menu-closed" class to the sidebar menu element to hide the sidebar by default -->
+<!-- DOC: Apply "page-sidebar-hide" class to the body to make the sidebar completely hidden on toggle -->
+<!-- DOC: Apply "page-sidebar-closed-hide-logo" class to the body element to make the logo hidden on sidebar toggle -->
+<!-- DOC: Apply "page-sidebar-hide" class to body element to completely hide the sidebar on sidebar toggle -->
+<!-- DOC: Apply "page-sidebar-fixed" class to have fixed sidebar -->
+<!-- DOC: Apply "page-footer-fixed" class to the body element to have fixed footer -->
+<!-- DOC: Apply "page-sidebar-reversed" class to put the sidebar on the right side -->
+<!-- DOC: Apply "page-full-width" class to the body element to have full width page without the sidebar menu -->
+
+<body
+	class="page-md page-header-fixed page-quick-sidebar-over-content page-sidebar-closed-hide-logo page-sidebar-fixed s">
+	<div id="preloader" style="display: none;"></div>
+	<!-- BEGIN HEADER -->
+	<div class="page-header md-shadow-z-1-i navbar navbar-fixed-top">
+		<!-- BEGIN HEADER INNER -->
+		<div class="page-header-inner">
+			<!-- BEGIN LOGO -->
+			<div class="page-logo">
+				<a target="_break" href="http://www.nsst.com.tw/">
+					<img src="./系統範例社區 全方位建築智慧化管理系統_files/logo.png" alt="logo" class="logo-default" width="95px"
+						height="16px">
+				</a>
+				<div class="menu-toggler sidebar-toggler hide">
+				</div>
+			</div>
+			<!-- END LOGO -->
+			<!-- BEGIN RESPONSIVE MENU TOGGLER -->
+			<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse"
+				data-target=".navbar-collapse">
+			</a>
+			<!-- END RESPONSIVE MENU TOGGLER -->
+			<!-- BEGIN TOP NAVIGATION MENU -->
+			<div class="top-menu">
+				<ul class="nav navbar-nav pull-right">
+					<!-- BEGIN NOTIFICATION DROPDOWN -->
+					<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+
+					<!-- BEGIN USER LOGIN DROPDOWN -->
+					<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+					<li class="dropdown dropdown-user">
+						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
+							data-close-others="true">
+							<img alt="" class="img-circle" src="./系統範例社區 全方位建築智慧化管理系統_files/profile.jpg" width="30px"
+								height="30px">
+							<span class="username username-hide-on-mobile">系統管理員</span>
+							<input type="hidden" id="readonly" value="none">
+							<i class="fa fa-angle-down"></i>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-default">
+							<li>
+								<a href="http://192.168.0.212:8080/tmcs/website">
+									<i class="icon-globe"></i> 社區網站 </a>
+							</li>
+							<li>
+								<a href="http://192.168.0.212:8080/tmcs/console">
+									<i class="icon-screen-desktop"></i> 櫃台系統 </a>
+							</li>
+							<li class="divider">
+							</li>
+							<li>
+								<a href="http://192.168.0.212:8080/tmcs/logout">
+									<i class="icon-key"></i> 登出 </a>
+							</li>
+						</ul>
+					</li>
+					<!-- END USER LOGIN DROPDOWN -->
+				</ul>
+			</div>
+			<!-- END TOP NAVIGATION MENU -->
+		</div>
+		<!-- END HEADER INNER -->
+	</div>
+	<!-- END HEADER -->
+	<div class="clearfix">
+	</div>
+	<!-- BEGIN CONTAINER -->
+	<div class="page-container">
+		<!-- BEGIN SIDEBAR -->
+		<div class="page-sidebar-wrapper">
+			<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+			<!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+			<div class="page-sidebar navbar-collapse collapse">
+				<!-- BEGIN SIDEBAR MENU -->
+				<!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+				<!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+				<!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+				<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+				<!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+				<!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+
+				<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 561px;">
+					<ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true"
+						data-slide-speed="200" data-height="561" data-initialized="1"
+						style="overflow: hidden; width: auto; height: 561px;">
+						<li class="heading">
+							<h3 class="uppercase" style="font-size:130%;font-weight:bolder;color:#FFFFFF;">
+								系統範例社區
+							</h3>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/langImport">
+								<i class="icon-bar-chart"></i>
+								<span class="title">多國語系匯入</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage">
+								<i class="icon-bar-chart"></i>
+								<span class="title">管理首頁</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="http://192.168.0.212:8080/tmcs/website">
+								<i class="icon-directions"></i>
+								<span class="title">前台首頁</span>
+							</a>
+						</li>
+						<li class="heading">
+							<h3 class="uppercase">管理系統目錄</h3>
+						</li>
+						<li class="nav-item      ">
+							<a class="nav-link nav-toggle" href="javascript:;">
+								<i class="icon-home"></i>
+								<span class="title">社區管理</span>
+								<span class="arrow"></span>
+							</a>
+							<ul class="sub-menu">
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/community">
+										<i class="icon-bar-chart"></i>
+										<span class="title">基本資料設定</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/community/setting">
+										<i class="icon-settings"></i>
+										<span class="title">系統設定</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/admin_setting">
+										<i class="fa fa-cogs"></i>
+										<span class="title">全功能開關設定</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link"
+										href="http://192.168.0.212:8080/tmcs/manage/community/Doorplate">
+										<i class="icon-home"></i>
+										<span class="title">門牌設定</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item    ">
+							<a class="nav-link nav-toggle" href="javascript:;">
+								<i class="icon-users"></i>
+								<span class="title">帳號管理</span>
+								<span class="arrow "></span>
+							</a>
+							<ul class="sub-menu">
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/user">
+										<i class="icon-home"></i>
+										<span class="title">使用者帳號</span>
+									</a>
+								</li>
+								<li class="nav-item  ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/admin">
+										<i class="icon-tag"></i>
+										<span class="title">管理者帳號</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/user/import">
+										<i class="icon-handbag"></i>
+										<span class="title">批次匯入使用者</span>
+									</a>
+								</li>
+
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/department">
+										<i class="icon-handbag"></i>
+										<span class="title">部門管理</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="nav-item ">
+							<a class="nav-link nav-toggle" href="javascript:;">
+								<i class="icon-notebook"></i>
+								<span class="title">社區平台管理</span>
+								<span class="arrow "></span>
+							</a>
+							<ul class="sub-menu">
+								<!--
+						舊版的"關於社區"，新版融合"管委會"，僅修改後台、app，櫃台、對講機待更新
+						為了避免table刪除發生的錯誤而留著這段程式碼，等全部更新完之後就可以刪除了！ by ting
+						<li class="nav-item ">
+							<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/platform/about/about">
+								<i class="icon-notebook"></i>
+								<span class="title">關於社區</span>
+							</a>
+						</li>
+						-->
+								<li class="nav-item ">
+									<a class="nav-link"
+										href="http://192.168.0.212:8080/tmcs/manage/platform/about/aboutus">
+										<i class="icon-notebook"></i>
+										<span class="title">關於社區</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/platform/news">
+										<i class="fa fa-bullhorn"></i>
+										<span class="title">消息發布</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/platform/meeting">
+										<i class="icon-notebook"></i>
+										<span class="title">社區會議</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/platform/firm">
+										<i class="icon-notebook"></i>
+										<span class="title">協力廠商</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/platform/activity">
+										<i class="fa fa-users"></i>
+										<span class="title">社區活動</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/platform/recruit">
+										<i class="icon-notebook"></i>
+										<span class="title">社區招商採購</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/platform/document">
+										<i class="icon-notebook"></i>
+										<span class="title">文件與手冊</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/platform/album">
+										<i class="icon-picture"></i>
+										<span class="title">社區相本</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a href="javascript:;" class="nav-link nav-toggle">
+										<i class="icon-calendar"></i>
+										<span class="title">社區行事曆</span>
+										<span class="arrow"></span>
+									</a>
+									<ul class="sub-menu" style="display: none;">
+										<li class="nav-item">
+											<a class="nav-link"
+												href="http://192.168.0.212:8080/tmcs/manage/platform/calendar">
+												<i class="icon-calendar"></i>
+												<span class="title">行事曆</span>
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="http://192.168.0.212:8080/tmcs/manage/platform/calendar/cal">
+												<i class="icon-calendar"></i>
+												<span class="title">行事曆管理</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link"
+										href="http://192.168.0.212:8080/tmcs/manage/platform/convinient">
+										<i class="icon-notebook"></i>
+										<span class="title">生活資訊</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/platform/link">
+										<i class="icon-notebook"></i>
+										<span class="title">常用連結</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-festival"
+										href="http://192.168.0.212:8080/tmcs/manage/platform/festival">
+										<i class="icon-fire"></i>
+										<span class="title">熱門節慶</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-tour" href="http://192.168.0.212:8080/tmcs/manage/platform/tour">
+										<i class="icon-star"></i>
+										<span class="title">推薦之旅</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-themespot"
+										href="http://192.168.0.212:8080/tmcs/manage/platform/theme_spot">
+										<i class="icon-picture"></i>
+										<span class="title">主題景點</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-themespot" href="http://192.168.0.212:8080/tmcs/manage/platform/spot">
+										<i class="icon-picture"></i>
+										<span class="title">社區景點</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/platform/sale">
+										<i class="icon-heart"></i>
+										<span class="title">週邊商家</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/platform/store">
+										<i class="icon-home"></i>
+										<span class="title">熱門店家</span>
+									</a>
+								</li>
+								<!-- 與協力廠商重複，稍後解決
+						<li class="nav-item ">
+					        <a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/platform/firm">
+					        	<i class="icon-briefcase"></i>
+					        	<span class="title">協力廠商</span>
+					        </a>
+				        </li>
+						-->
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/platform/wenlin">
+										<i class="fa fa-heart"></i>
+										<span class="title">建商專區</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/platform/factory">
+										<i class="fa fa-heart"></i>
+										<span class="title">廠戶介紹</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item ">
+							<a class="nav-link nav-toggle" href="javascript:;">
+								<i class="icon-bubbles"></i>
+								<span class="title">社區互動</span>
+								<span class="arrow"></span>
+							</a>
+							<ul class="sub-menu">
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/interactive/forum">
+										<i class="glyphicon glyphicon-comment"></i>
+										<span class="title">討論區</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/interactive/vote">
+										<i class="glyphicon glyphicon-ok-sign"></i>
+										<span class="title">投票</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link"
+										href="http://192.168.0.212:8080/tmcs/manage/interactive/lost_thing">
+										<i class="glyphicon glyphicon-inbox"></i>
+										<span class="title">失物招領</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link"
+										href="http://192.168.0.212:8080/tmcs/manage/interactive/home_service">
+										<i class="glyphicon glyphicon-user"></i>
+										<span class="title">居家服務</span>
+									</a>
+								</li>
+								<li class="nav-item   ">
+									<a class="nav-link"
+										href="http://192.168.0.212:8080/tmcs/manage/interactive/fault_report_index">
+										<i class="glyphicon glyphicon-wrench"></i>
+										<span class="title">修繕服務</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link"
+										href="http://192.168.0.212:8080/tmcs/manage/interactive/fault_dispatch">
+										<i class="glyphicon glyphicon-wrench"></i>
+										<span class="title">派工資料</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/interactive/record">
+										<i class="glyphicon glyphicon-pencil"></i>
+										<span class="title">住戶抄錶</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link"
+										href="http://192.168.0.212:8080/tmcs/manage/interactive/secondhand">
+										<i class="glyphicon glyphicon-lamp"></i>
+										<span class="title">二手商品</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link"
+										href="http://192.168.0.212:8080/tmcs/manage/interactive/rentsale">
+										<i class="glyphicon glyphicon-home"></i>
+										<span class="title">房屋租售</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link"
+										href="http://192.168.0.212:8080/tmcs/manage/interactive/matters_assigned">
+										<i class="fa fa-hand-stop-o"></i>
+										<span class="title">交辦事項</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="heading">
+							<h3 class="uppercase">功能列表</h3>
+						</li>
+						<li class="nav-item      ">
+							<a class="nav-link nav-toggle" href="javascript:;">
+								<i class="icon-book-open"></i>
+								<span class="title">公設系統</span>
+								<span class="arrow "></span>
+							</a>
+							<ul class="sub-menu">
+								<li class="nav-item  ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/equipment">
+										<span class="title">公設物品管理</span>
+									</a>
+								</li>
+								<li class="nav-item    ">
+									<a href="javascript:;" class="nav-link nav-toggle">
+										<span class="title">公設管理</span>
+										<span class="arrow"></span>
+									</a>
+									<ul class="sub-menu" style="display: none;">
+										<li class="nav-item ">
+											<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/inst">
+												<i class="fa fa-check-square-o "></i>
+												<span class="title">預約制</span>
+											</a>
+										</li>
+										<li class="nav-item ">
+											<a class="nav-link"
+												href="http://192.168.0.212:8080/tmcs/manage/inst_timing">
+												<i class="fa fa-clock-o"></i>
+												<span class="title">計時制</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="nav-item  ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/inst/point">
+										<span class="title">點數管理</span>
+									</a>
+								</li>
+								<li class="nav-item  ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/inst/order">
+										<span class="title">預約單管理</span>
+									</a>
+								</li>
+								<li class="nav-item  ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/inst/card/mooncard">
+										<span class="title">月卡管理</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/searchview">
+										<span class="title">各式報表</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item  ">
+							<a class="nav-link nav-toggle" href="javascript:;">
+								<i class="icon-cup"></i>
+								<span class="title">點餐系統</span>
+								<span class="arrow"></span>
+							</a>
+							<ul class="sub-menu">
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/meal">
+										<span class="title">餐點管理</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/meal/log">
+										<span class="title">餐點紀錄</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/meal/order"
+										target="_blank">
+										<span class="title">點餐櫃檯</span>
+										<span class="badge badge-roundless badge-success">新視窗</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/meal/food">
+										<span class="title">原料管理</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/meal/blood">
+										<span class="title">成分管理</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/meal/seat">
+										<span class="title">餐桌管理</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+
+						<li class="nav-item ">
+							<a class="nav-link nav-toggle" href="javascript:;">
+								<i class="icon-envelope-open"></i>
+								<span class="title">郵件管理</span>
+								<span class="arrow"></span>
+							</a>
+							<ul class="sub-menu">
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/mail?mailstate=0">
+										<span class="title">郵件列表</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/mail/setting">
+										<span class="nav-link">設定</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/quicks/mail"
+										target="_blank">
+										<span class="title">快速信件登錄</span>
+										<span class="badge badge-roundless badge-success">新視窗</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+
+
+
+						<li class="nav-item ">
+							<a class="nav-link nav-toggle" href="javascript:;">
+								<i class="icon-key"></i>
+								<span class="title">訪客管理</span>
+								<span class="arrow "></span>
+							</a>
+							<ul class="sub-menu">
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/guest">
+										<span class="title">訪客列表</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/guest/setting">
+										<span class="title">設定</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/quicks/quick/guest"
+										target="_blank">
+										<span class="title">快速訪客登錄</span>
+										<span class="badge badge-roundless badge-success">新視窗</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item ">
+							<a class="nav-link nav-toggle" href="javascript:;">
+								<i class="icon-drawer"></i>
+								<span class="title">寄物管理</span>
+								<span class="arrow"></span>
+							</a>
+							<ul class="sub-menu">
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/keeper">
+										<span class="title">寄物列表</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/keeper/setting">
+										<span class="title">設定</span>
+									</a>
+								</li>
+								<li>
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/quicks/quick/keeper"
+										target="_blank">
+										<span class="title">快速寄放物登錄</span>
+										<span class="badge badge-roundless badge-success">新視窗</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item ">
+							<a class="nav-link nav-toggle" href="javascript:;">
+								<i class="glyphicon glyphicon-home"></i>
+								<span class="title">BA管理</span>
+								<span class="arrow"></span>
+							</a>
+							<ul class="sub-menu">
+								<li class="nav-item 
+								
+								
+								
+								
+								">
+									<a class="nav-link nav-toggle " href="javascript:;">
+										<i class="glyphicon glyphicon-file"></i>
+										<span class="title">基本資料建檔</span>
+										<span class="arrow"></span>
+									</a>
+									<ul class="sub-menu">
+										<li class="nav-item ">
+											<a class="nav-link"
+												href="http://192.168.0.212:8080/tmcs/manage/ba/sensor_index">
+												<span class="title">設備基本資料建立</span>
+											</a>
+										</li>
+										<li class="nav-item ">
+											<a class="nav-link"
+												href="http://192.168.0.212:8080/tmcs/manage/ba/category_index">
+												<span class="title">設備分類類別檢視</span>
+											</a>
+										</li>
+										<li class="nav-item ">
+											<a class="nav-link"
+												href="http://192.168.0.212:8080/tmcs/manage/ba/location_index">
+												<span class="title">存放位置資料建立</span>
+											</a>
+										</li>
+										<li class="nav-item ">
+											<a class="nav-link"
+												href="http://192.168.0.212:8080/tmcs/manage/ba/para_index">
+												<span class="title">標籤參數管理</span>
+											</a>
+										</li>
+										<li class="nav-item ">
+											<a class="nav-link"
+												href="http://192.168.0.212:8080/tmcs/manage/ba/sensorImport">
+												<span class="title">BA感應器匯入</span>
+											</a>
+										</li>
+
+										<li class="nav-item ">
+											<a class="nav-link"
+												href="http://192.168.0.212:8080/tmcs/manage/ba/ba_report_input">
+												<span class="title">BA紀錄匯入</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link nav-toggle" href="javascript:;">
+										<i class="glyphicon glyphicon-eye-open"></i>
+										<span class="title">設備監控</span>
+										<span class="arrow"></span>
+									</a>
+									<ul class="sub-menu">
+										<li class="nav-item ">
+											<a class="nav-link"
+												href="http://192.168.0.212:8080/tmcs/manage/ba/sensor_records">
+												<span class="title">設備監控log</span>
+											</a>
+										</li>
+										<li class="nav-item ">
+											<a target="_blank" class="nav-link"
+												href="http://192.168.0.212:8080/tmcs/console/sensor_list">
+												<span class="title">圖形監控畫面</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/ba/listSensorFault">
+										<i class="fa fa-wrench"></i>
+										<span class="title ">BA修繕連動</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+
+
+
+
+
+						<li class="nav-item ">
+							<a class="nav-link nav-toggle" href="javascript:;">
+								<i class="icon-eye"></i>
+								<span class="title">清潔管理</span>
+								<span class="arrow"></span>
+							</a>
+							<ul class="sub-menu">
+								<li class="nav-item    ">
+									<a class="nav-link nav-toggle" href="javascript:;">
+										<span class="title">清潔基本建檔</span>
+										<span class="arrow"></span>
+									</a>
+									<ul class="sub-menu">
+										<li class="nav-item ">
+											<a class="nav-link"
+												href="http://192.168.0.212:8080/tmcs/manage/purifying/location">
+												<span class="title">清潔地點管理</span>
+											</a>
+										</li>
+										<li class="nav-item ">
+											<a class="nav-link"
+												href="http://192.168.0.212:8080/tmcs/manage/purifying/event">
+												<span class="title">清潔事件管理</span>
+											</a>
+										</li>
+										<li class="nav-item ">
+											<a class="nav-link"
+												href="http://192.168.0.212:8080/tmcs/manage/purifying/route">
+												<span class="title">清潔路線建立</span>
+											</a>
+										</li>
+										<li class="nav-item ">
+											<a class="nav-link"
+												href="http://192.168.0.212:8080/tmcs/manage/purifying/config">
+												<span class="title">清潔設定</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/purifying/log">
+										<span class="title">最近清潔紀錄</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link nav-toggle" href="javascript:;">
+										<span class="title">清潔報表</span>
+										<span class="arrow"></span>
+									</a>
+									<ul class="sub-menu">
+										<li class="nav-item ">
+											<a class="nav-link"
+												href="http://192.168.0.212:8080/tmcs/manage/purifying/table1">
+												<span class="title">流水紀錄表</span>
+											</a>
+										</li>
+										<li class="nav-item ">
+											<a class="nav-link"
+												href="http://192.168.0.212:8080/tmcs/manage/purifying/table2">
+												<span class="title">事件報表</span>
+											</a>
+										</li>
+										<li class="nav-item ">
+											<a class="nav-link"
+												href="http://192.168.0.212:8080/tmcs/manage/purifying/table3">
+												<span class="title">清潔計畫考核報表</span>
+											</a>
+										</li>
+										<li class="nav-item ">
+											<a class="nav-link"
+												href="http://192.168.0.212:8080/tmcs/manage/purifying/table4">
+												<span class="title">漏檢報表</span>
+											</a>
+										</li>
+										<li class="nav-item ">
+											<a class="nav-link"
+												href="http://192.168.0.212:8080/tmcs/manage/purifying/table5">
+												<span class="title">人員出巡完成狀況報表</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+
+
+						<li class="nav-item ">
+							<a class="nav-link nav-toggle" href="javascript:;">
+								<i class="fa fa-television"></i>
+								<span class="title">多媒體管理系統</span>
+								<span class="arrow"></span>
+							</a>
+							<ul class="sub-menu">
+								<li class="nav-item ">
+									<a class="nav-link" target="_blank" href="http://192.168.0.212:8080/tmcs/manage">
+										<span class="title">多媒體管理</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="nav-item  ">
+							<a class="nav-link nav-toggle" href="javascript:;">
+								<i class="glyphicon glyphicon-folder-open"></i>
+								<span class="title">訊息管理</span>
+								<span class="arrow"></span>
+							</a>
+							<ul class="sub-menu">
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/message">
+										<span class="title">訊息發送</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/message/setting">
+										<span class="nav-link">訊息設定</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/message/feedback">
+										<span class="nav-link">訊息處理</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+
+
+						<li class="nav-item  ">
+							<a class="nav-link nav-toggle" href="javascript:;">
+								<i class="fa fa-building"></i>
+								<span class="title">門禁管理</span>
+								<span class="arrow "></span>
+							</a>
+							<ul class="sub-menu">
+								<li class="nav-item   ">
+									<a class="nav-link nav-toggle" href="javascript:;">
+										<i class="glyphicon glyphicon-file"></i>
+										<span class="title">基本資料建檔</span>
+										<span class="arrow   "></span>
+									</a>
+									<ul class="sub-menu">
+										<li class="nav-item ">
+											<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/access">
+												<span class="title">門禁列表</span>
+											</a>
+										</li>
+										<li class="nav-item ">
+											<a class="nav-link"
+												href="http://192.168.0.212:8080/tmcs/manage/access/location">
+												<span class="title">門禁位置資料建立</span>
+											</a>
+										</li>
+										<li class="nav-item ">
+											<a class="nav-link"
+												href="http://192.168.0.212:8080/tmcs/manage/access/class">
+												<span class="title">門禁總類類別建立</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+
+								<li class="nav-item   ">
+									<a class="nav-link nav-toggle" href="javascript:;">
+										<i class="glyphicon glyphicon-file"></i>
+										<span class="title">門禁管制</span>
+										<span class="arrow   "></span>
+									</a>
+									<ul class="sub-menu">
+										<li class="nav-item ">
+											<a class="nav-link"
+												href="http://192.168.0.212:8080/tmcs/manage/access/staff">
+												<span class="title">人組</span>
+											</a>
+										</li>
+										<li class="nav-item ">
+											<a class="nav-link"
+												href="http://192.168.0.212:8080/tmcs/manage/access/door">
+												<span class="title">門組</span>
+											</a>
+										</li>
+										<!-- 此功能已經整入"人組"界面 所以把這個頁面拿掉 -->
+										<!-- 								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/access/staff_to_door">
+										<span class="title">人組加到門組</span>
+									</a>
+								</li> -->
+									</ul>
+								</li>
+
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/access/setting">
+										<i class="fa fa-cog"></i>
+										<span class="title">門禁設定</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/access/brand">
+										<i class="fa fa-cog"></i>
+										<span class="title">門禁品牌</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/access/report">
+										<i class="glyphicon glyphicon-print"></i>
+										<span class="title">報表查詢及列印</span>
+									</a>
+								</li>
+
+							</ul>
+						</li>
+
+						<li class="nav-item 
+									">
+							<a class="nav-link nav-toggle" href="javascript:;">
+								<i class="fa fa-car"></i>
+								<span class="title">停車管理</span>
+								<span class="arrow "></span>
+							</a>
+							<ul class="sub-menu">
+								<li class="nav-item 
+									
+									
+									
+									
+									
+									">
+									<a class="nav-link nav-toggle" href="javascript:;">
+										<i class="glyphicon glyphicon-file"></i>
+										<span class="title">基本資料建檔</span>
+										<span class="arrow 
+											
+											
+											
+											
+											">
+										</span>
+									</a>
+									<ul class="sub-menu 
+																
+														">
+										<li class="nav-item ">
+											<a class="nav-link"
+												href="http://192.168.0.212:8080/tmcs/manage/parking/car">
+												<span class="title">停車列表</span>
+											</a>
+										</li>
+										<li class="nav-item ">
+											<a class="nav-link"
+												href="http://192.168.0.212:8080/tmcs/manage/parking/location/car">
+												<span class="title">停車位置資料建立</span>
+											</a>
+										</li>
+										<li class="nav-item ">
+											<a class="nav-link"
+												href="http://192.168.0.212:8080/tmcs/manage/parking/class/car">
+												<span class="title">停車總類類別建立</span>
+											</a>
+										</li>
+
+										<li class="nav-item ">
+											<a class="nav-link"
+												href="http://192.168.0.212:8080/tmcs/manage/parking/doorplate/car">
+												<span class="title">E-Tag管理</span>
+											</a>
+										</li>
+
+										<li class="nav-item ">
+											<a class="nav-link"
+												href="http://192.168.0.212:8080/tmcs/manage/parking/garage/car">
+												<span class="title">停車車位管理</span>
+											</a>
+										</li>
+
+										<li class="nav-item ">
+											<a class="nav-link"
+												href="http://192.168.0.212:8080/tmcs/manage/parking/import/car">
+												<span class="title">停車車位匯入</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+
+								<li class="nav-item 
+													
+													">
+									<a class="nav-link nav-toggle" href="javascript:;">
+										<i class="glyphicon glyphicon-file"></i>
+										<span class="title">停車管制</span>
+										<span class="arrow 
+														   
+														   "></span>
+									</a>
+									<ul class="sub-menu 
+														
+														">
+										<li class="nav-item ">
+											<a class="nav-link"
+												href="http://192.168.0.212:8080/tmcs/manage/parking/staff/car">
+												<span class="title">人組</span>
+											</a>
+										</li>
+										<li class="nav-item ">
+											<a class="nav-link"
+												href="http://192.168.0.212:8080/tmcs/manage/parking/door/car">
+												<span class="title">門組</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+
+
+								<li class="nav-item ">
+									<a class="nav-link"
+										href="http://192.168.0.212:8080/tmcs/manage/parking/setting/car">
+										<i class="fa fa-cog"></i>
+										<span class="title">停車設定</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/parking/brand/car">
+										<i class="fa fa-building"></i>
+										<span class="title">停車品牌</span>
+									</a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="http://192.168.0.212:8080/tmcs/manage/parking/report/car">
+										<i class="glyphicon glyphicon-print"></i>
+										<span class="title">報表查詢及列印</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+					</ul>
+					<div class="slimScrollBar"
+						style="background: rgb(187, 187, 187); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 358.861px;">
+					</div>
+					<div class="slimScrollRail"
+						style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(234, 234, 234); opacity: 0.2; z-index: 90; right: 1px;">
+					</div>
+				</div>
+
+
+				<!-- END SIDEBAR MENU -->
+			</div>
+		</div>
+		<!-- END SIDEBAR -->
+		<!-- BEGIN CONTENT -->
+		<div class="page-content-wrapper" id="main">
+			<div class="page-content" style="min-height:528px">
+				<!-- BEGIN PAGE HEADER-->
+				<h3 class="page-title">
+					Dashboard
+				</h3>
+				<div class="page-bar">
+					<ul class="page-breadcrumb">
+						<li>
+							<i class="fa fa-home"></i>
+							<a href="#">Dashboard</a>
+							<!-- <i class="fa fa-angle-right"></i> -->
+						</li>
+					</ul>
+					<div class="page-toolbar">
+					</div>
+				</div>
+
+				<!-- END PAGE HEADER-->
+
+				<!-- main-contain -->
+				<div>
+					<!-- 標題 -->
+					<!-- 內容START -->
+					<div class="flexSpaceBetween">
+						<!-- 內容左側START -->
+						<div class="dashBoard__left">
+							<div class="motherHouse">
+								<div class="motherHouse__top flexSpaceBetween ">
+									<div class="motherHouse__top__left fontSize16"><i class="fa fa-home"></i>媽媽客房
+									</div>
+									<div class="flex">
+										<div class="flex marginRight10">
+											<div class="motherHouse__top__pointGreen "></div>
+											<div>狀態良好</div>
+										</div>
+										<div class="flex marginRight10">
+											<div class="motherHouse__top__pointGold "></div>
+											<div>需多關照</div>
+										</div>
+										<div class="flex marginRight10">
+											<div class="motherHouse__top__pointRed "></div>
+											<div>狀況不佳</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div classname="row">
+								<!-- 狀態有三種顏色 由css控制 
+										motherHouse__card__img__statusGood
+										motherHouse__card__img__statusNormal
+										motherHouse__card__img__statusBad
+									-->
+								<div class="motherHouse__card card_shdaw flexSpaceBetween fontSize12 col-lg-1 col-md-2 col-sm-2 col-xs-2">
+									<div class="flexColumn">
+										<div class="marginBottom14">
+											<div class="flex marginBottom4 colorBornWeight ">
+												<div class="flexCenter marginRight3"> <i class="fa fa-home"></i>
+												</div>
+												<div>房號 H001</div>
+											</div>
+											<div class="marginLeft12 paddingLeft2">新月房VIP </div>
+										</div>
+										<div>
+											<div class="flex marginBottom4 colorBornWeight">
+												<div class="flexCenter marginRight3"> <i class="fa fa-heart"></i>
+												</div>
+												<div>林林媽媽(26)</div>
+											</div>
+											<div class="marginLeft12 paddingLeft2">11/11-11-12(1天) </div>
+										</div>
+									</div>
+									<div class="motherHouse__card__img">
+										<div class="motherHouse__card__img__statusGood"></div>
+									</div>
+								</div>
+								<div class="motherHouse__card card_shdaw flexSpaceBetween fontSize12 col-lg-1 col-md-2 col-sm-2 col-xs-2">
+									<div class="flexColumn">
+										<div class="marginBottom14">
+											<div class="flex marginBottom4 colorBornWeight ">
+												<div class="flexCenter marginRight3"> <i class="fa fa-home"></i>
+												</div>
+												<div>房號 H001</div>
+											</div>
+											<div class="marginLeft12 paddingLeft2">新月房VIP </div>
+										</div>
+										<div>
+											<div class="flex marginBottom4 colorBornWeight">
+												<div class="flexCenter marginRight3"> <i class="fa fa-heart"></i>
+												</div>
+												<div>林林媽媽(26)</div>
+											</div>
+											<div class="marginLeft12 paddingLeft2">11/11-11-12(1天) </div>
+										</div>
+									</div>
+									<div class="motherHouse__card__img">
+										<div class="motherHouse__card__img__statusGood"></div>
+									</div>
+								</div>
+								<div class="motherHouse__card card_shdaw flexSpaceBetween fontSize12 col-lg-1 col-md-2 col-sm-2 col-xs-2">
+									<div class="flexColumn">
+										<div class="marginBottom14">
+											<div class="flex marginBottom4 colorBornWeight ">
+												<div class="flexCenter marginRight3"> <i class="fa fa-home"></i>
+												</div>
+												<div>房號 H001</div>
+											</div>
+											<div class="marginLeft12 paddingLeft2">新月房VIP </div>
+										</div>
+										<div>
+											<div class="flex marginBottom4 colorBornWeight">
+												<div class="flexCenter marginRight3"> <i class="fa fa-heart"></i>
+												</div>
+												<div>林林媽媽(26)</div>
+											</div>
+											<div class="marginLeft12 paddingLeft2">11/11-11-12(1天) </div>
+										</div>
+									</div>
+									<div class="motherHouse__card__img">
+										<div class="motherHouse__card__img__statusGood"></div>
+									</div>
+								</div>
+								<div class="motherHouse__card card_shdaw flexSpaceBetween fontSize12 col-lg-1 col-md-2 col-sm-2 col-xs-2">
+									<div class="flexColumn">
+										<div class="marginBottom14">
+											<div class="flex marginBottom4 colorBornWeight ">
+												<div class="flexCenter marginRight3"> <i class="fa fa-home"></i>
+												</div>
+												<div>房號 H001</div>
+											</div>
+											<div class="marginLeft12 paddingLeft2">新月房VIP </div>
+										</div>
+										<div>
+											<div class="flex marginBottom4 colorBornWeight">
+												<div class="flexCenter marginRight3"> <i class="fa fa-heart"></i>
+												</div>
+												<div>林林媽媽(26)</div>
+											</div>
+											<div class="marginLeft12 paddingLeft2">11/11-11-12(1天) </div>
+										</div>
+									</div>
+									<div class="motherHouse__card__img">
+										<div class="motherHouse__card__img__statusGood"></div>
+									</div>
+								</div>
+								<div class="motherHouse__card card_shdaw flexSpaceBetween fontSize12 col-lg-1 col-md-2 col-sm-2 col-xs-2">
+									<div class="flexColumn">
+										<div class="marginBottom14">
+											<div class="flex marginBottom4 colorBornWeight ">
+												<div class="flexCenter marginRight3"> <i class="fa fa-home"></i>
+												</div>
+												<div>房號 H001</div>
+											</div>
+											<div class="marginLeft12 paddingLeft2">新月房VIP </div>
+										</div>
+										<div>
+											<div class="flex marginBottom4 colorBornWeight">
+												<div class="flexCenter marginRight3"> <i class="fa fa-heart"></i>
+												</div>
+												<div>林林媽媽(26)</div>
+											</div>
+											<div class="marginLeft12 paddingLeft2">11/11-11-12(1天) </div>
+										</div>
+									</div>
+									<div class="motherHouse__card__img">
+										<div class="motherHouse__card__img__statusGood"></div>
+									</div>
+								</div>
+								<div class="motherHouse__card card_shdaw flexSpaceBetween fontSize12 col-lg-1 col-md-2 col-sm-2 col-xs-2">
+									<div class="flexColumn">
+										<div class="marginBottom14">
+											<div class="flex marginBottom4 colorBornWeight ">
+												<div class="flexCenter marginRight3"> <i class="fa fa-home"></i>
+												</div>
+												<div>房號 H001</div>
+											</div>
+											<div class="marginLeft12 paddingLeft2">新月房VIP </div>
+										</div>
+										<div>
+											<div class="flex marginBottom4 colorBornWeight">
+												<div class="flexCenter marginRight3"> <i class="fa fa-heart"></i>
+												</div>
+												<div>林林媽媽(26)</div>
+											</div>
+											<div class="marginLeft12 paddingLeft2">11/11-11-12(1天) </div>
+										</div>
+									</div>
+									<div class="motherHouse__card__img">
+										<div class="motherHouse__card__img__statusGood"></div>
+									</div>
+								</div>
+								<div class="motherHouse__card card_shdaw flexSpaceBetween fontSize12 col-lg-1 col-md-2 col-sm-2 col-xs-2">
+									<div class="flexColumn">
+										<div class="marginBottom14">
+											<div class="flex marginBottom4 colorBornWeight ">
+												<div class="flexCenter marginRight3"> <i class="fa fa-home"></i>
+												</div>
+												<div>房號 H001</div>
+											</div>
+											<div class="marginLeft12 paddingLeft2">新月房VIP </div>
+										</div>
+										<div>
+											<div class="flex marginBottom4 colorBornWeight">
+												<div class="flexCenter marginRight3"> <i class="fa fa-heart"></i>
+												</div>
+												<div>林林媽媽(26)</div>
+											</div>
+											<div class="marginLeft12 paddingLeft2">11/11-11-12(1天) </div>
+										</div>
+									</div>
+									<div class="motherHouse__card__img">
+										<div class="motherHouse__card__img__statusGood"></div>
+									</div>
+								</div>
+								<div class="motherHouse__card card_shdaw flexSpaceBetween fontSize12 col-lg-1 col-md-2 col-sm-2 col-xs-2">
+									<div class="flexColumn">
+										<div class="marginBottom14">
+											<div class="flex marginBottom4 colorBornWeight ">
+												<div class="flexCenter marginRight3"> <i class="fa fa-home"></i>
+												</div>
+												<div>房號 H001</div>
+											</div>
+											<div class="marginLeft12 paddingLeft2">新月房VIP </div>
+										</div>
+										<div>
+											<div class="flex marginBottom4 colorBornWeight">
+												<div class="flexCenter marginRight3"> <i class="fa fa-heart"></i>
+												</div>
+												<div>林林媽媽(26)</div>
+											</div>
+											<div class="marginLeft12 paddingLeft2">11/11-11-12(1天) </div>
+										</div>
+									</div>
+									<div class="motherHouse__card__img">
+										<div class="motherHouse__card__img__statusGood"></div>
+									</div>
+								</div>
+								<div class="motherHouse__card card_shdaw flexSpaceBetween fontSize12 col-lg-1 col-md-2 col-sm-2 col-xs-2">
+									<div class="flexColumn">
+										<div class="marginBottom14">
+											<div class="flex marginBottom4 colorBornWeight ">
+												<div class="flexCenter marginRight3"> <i class="fa fa-home"></i>
+												</div>
+												<div>房號 H001</div>
+											</div>
+											<div class="marginLeft12 paddingLeft2">新月房VIP </div>
+										</div>
+										<div>
+											<div class="flex marginBottom4 colorBornWeight">
+												<div class="flexCenter marginRight3"> <i class="fa fa-heart"></i>
+												</div>
+												<div>林林媽媽(26)</div>
+											</div>
+											<div class="marginLeft12 paddingLeft2">11/11-11-12(1天) </div>
+										</div>
+									</div>
+									<div class="motherHouse__card__img">
+										<div class="motherHouse__card__img__statusGood"></div>
+									</div>
+								</div>
+								<div class="motherHouse__card card_shdaw flexSpaceBetween fontSize12 col-lg-1 col-md-2 col-sm-2 col-xs-2">
+									<div class="flexColumn">
+										<div class="marginBottom14">
+											<div class="flex marginBottom4 colorBornWeight ">
+												<div class="flexCenter marginRight3"> <i class="fa fa-home"></i>
+												</div>
+												<div>房號 H001</div>
+											</div>
+											<div class="marginLeft12 paddingLeft2">新月房VIP </div>
+										</div>
+										<div>
+											<div class="flex marginBottom4 colorBornWeight">
+												<div class="flexCenter marginRight3"> <i class="fa fa-heart"></i>
+												</div>
+												<div>林林媽媽(26)</div>
+											</div>
+											<div class="marginLeft12 paddingLeft2">11/11-11-12(1天) </div>
+										</div>
+									</div>
+									<div class="motherHouse__card__img">
+										<div class="motherHouse__card__img__statusGood"></div>
+									</div>
+								</div>
+								<div class="motherHouse__card card_shdaw flexSpaceBetween fontSize12 col-lg-1 col-md-2 col-sm-2 col-xs-2">
+									<div class="flexColumn">
+										<div class="marginBottom14">
+											<div class="flex marginBottom4 colorBornWeight ">
+												<div class="flexCenter marginRight3"> <i class="fa fa-home"></i>
+												</div>
+												<div>房號 H001</div>
+											</div>
+											<div class="marginLeft12 paddingLeft2">新月房VIP </div>
+										</div>
+										<div>
+											<div class="flex marginBottom4 colorBornWeight">
+												<div class="flexCenter marginRight3"> <i class="fa fa-heart"></i>
+												</div>
+												<div>林林媽媽(26)</div>
+											</div>
+											<div class="marginLeft12 paddingLeft2">11/11-11-12(1天) </div>
+										</div>
+									</div>
+									<div class="motherHouse__card__img">
+										<div class="motherHouse__card__img__statusGood"></div>
+									</div>
+								</div>
+
+								
+
+							</div>
+						</div>
+						<!-- 內容左側END -->
+						<!-- 內容右側START -->
+						<div>
+							<!-- 住房率START -->
+							<div class="flexColumn">
+								<div class="OccupancyRate card_shdaw backgroundBorder flexSpaceBetween marginBottom14">
+									<div></div>
+									<div class="flexColumn">
+										<div class="flex marginBottom4">
+											<div class="OccupancyRate__pointLight marginRight14"></div>
+											<div>入住房數</div>
+										</div>
+										<div class="OccupancyRate__houseNumber marginBottom4">20</div>
+										<div class="flex marginBottom4">
+											<div class="OccupancyRate__pointDark marginRight14"></div>
+											<div>剩餘房數</div>
+										</div>
+										<div class="OccupancyRate__houseNumber marginBottom4">20</div>
+									</div>
+								</div>
+								<div class="OccupancyRate__today card_shdaw flex marginBottom14">
+									<div class="flexColumn marginRight6">
+										<div class="marginBottom4 ">今日入住</div>
+										<div class="flexCenter fontSize20">4</div>
+									</div>
+									<div class="rightLine45 marginRight6"></div>
+									<div>
+										<div class="marginBottom4 marginRight6 ">今日退房</div>
+										<div class="flexCenter fontSize20">4</div>
+									</div>
+									<div class="rightLine45 marginRight6"></div>
+									<div>
+										<div class="marginBottom4 ">今日轉房</div>
+										<div class="flexCenter fontSize20">4</div>
+									</div>
+								</div>
+								<div class="OccupancyRate__today card_shdaw flex marginBottom14">
+									<div class="flexColumn marginRight6">
+										<div class="marginBottom4 ">媽媽人數</div>
+										<div class="flexCenter fontSize20">4</div>
+									</div>
+									<div class="rightLine45 marginRight6"></div>
+									<div>
+										<div class="marginBottom4 marginRight6 ">寶寶人數</div>
+										<div class="flexCenter fontSize20">4</div>
+									</div>
+									<div class="rightLine45 marginRight6"></div>
+									<div class="">
+										<div class="marginBottom4 ">轉託嬰數</div>
+										<div class="flexCenter fontSize20">4</div>
+									</div>
+								</div>
+							</div>
+							<!-- 住房率END -->
+							<!-- 媽媽服務START -->
+							<div class="motherServe card_shdaw marginBottom14">
+								<div class="motherServe__title marginBottom10 fontSize16 fontWeight">媽媽服務</div>
+								<ul class="motherServe__ul">
+									<li class="flexSpaceBetween">
+										<div class="marginRight20">
+											<div>林太太</div>
+											<div>H001</div>
+										</div>
+										<div class="motherServe__type marginRight20">打掃請求</div>
+										<div class="motherServe__level">
+											<div class="motherServe__level__height"></div>
+										</div>
+									</li>
+									<li class="flexSpaceBetween">
+										<div class="marginRight20">
+											<div>陳太太</div>
+											<div>H002</div>
+										</div>
+										<div class="motherServe__type marginRight20">其他請求</div>
+										<div class="motherServe__level">
+											<div class="motherServe__level__normal"></div>
+										</div>
+									</li>
+									<li class="flexSpaceBetween">
+										<div class="marginRight20">
+											<div>張太太</div>
+											<div>H003</div>
+										</div>
+										<div class="motherServe__type marginRight20">其他請求</div>
+										<div class="motherServe__level">
+											<div class="motherServe__level__height"></div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- 媽媽服務END -->
+							<!-- 最新通知START -->
+							<div class="news card_shdaw">
+								<div class="flexSpaceBetween  marginBottom10">
+									<div class="news__title fontSize16 fontWeight">最新通知</div>
+									<div>
+										<div class="dropdown">
+											<button class="btn btn-default dropdown-toggle" type="button"
+												id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+												aria-expanded="true">
+												全部
+												<span class="caret"></span>
+											</button>
+											<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+												<li><a
+														href="file:///Users/ericnsst/Documents/Eric/%E6%96%B0%E6%9C%88%E9%9B%86/%E6%96%B0%E6%9C%88%E5%89%8D%E7%AB%AF%E6%B8%AC%E8%A9%A6/www/dashboard1.html#">護理</a>
+												</li>
+												<li><a
+														href="file:///Users/ericnsst/Documents/Eric/%E6%96%B0%E6%9C%88%E9%9B%86/%E6%96%B0%E6%9C%88%E5%89%8D%E7%AB%AF%E6%B8%AC%E8%A9%A6/www/dashboard1.html#">克服</a>
+												</li>
+												<li><a
+														href="file:///Users/ericnsst/Documents/Eric/%E6%96%B0%E6%9C%88%E9%9B%86/%E6%96%B0%E6%9C%88%E5%89%8D%E7%AB%AF%E6%B8%AC%E8%A9%A6/www/dashboard1.html#">行政</a>
+												</li>
+												<li><a
+														href="file:///Users/ericnsst/Documents/Eric/%E6%96%B0%E6%9C%88%E9%9B%86/%E6%96%B0%E6%9C%88%E5%89%8D%E7%AB%AF%E6%B8%AC%E8%A9%A6/www/dashboard1.html#">其他</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<ul class="news__ul marginBottom14">
+									<!-- li共有四種顏色 四種主題 如下-->
+									<li class="news__li flex marginBottom10">
+										<div class="marginRight10 news__Type news__Type__nurse">護理</div>
+										<div>春城紫禁曉陰陰。</div>
+									</li>
+									<li class="news__li flex marginBottom10 ">
+										<div class="marginRight10 news__Type news__Type__clientServe">客服</div>
+										<div>春城紫禁曉陰陰。</div>
+									</li>
+									<li class="news__li flex marginBottom10">
+										<div class="marginRight10 news__Type news__Type__administrative">行政</div>
+										<div>長樂鐘聲花外盡，</div>
+									</li>
+									<li class="news__li flex marginBottom10">
+										<div class="marginRight10 news__Type news__Type__theOther">其他</div>
+										<div class="news__li">龍池柳色雨中深。龍池柳色雨中深。龍池柳色雨中深。</div>
+									</li>
+
+								</ul>
+							</div>
+							<!-- 最新通知END---->
+						</div>
+						<!-- 內容右側END -->
+					</div>
+					<!-- 內容END -->
+					<div class="clearfix">
+					</div>
+
+				</div>
+			</div>
+			<!-- END CONTENT -->
+
+		</div>
+		<!-- END CONTAINER -->
+		<!-- BEGIN FOOTER -->
+		<div class="page-footer">
+			<div class="page-footer-inner" style="margin-right:150px;">
+				2015 © NSST 全方位建築智慧化管理系統 <a href="http://www.nsst.com.tw/" title="新保科技有限公司" target="_blank">新保科技有限公司
+				</a>
+				<!-- 服務電話：02-2356-7705 -->
+				　版本號:V2.21.08.11
+			</div>
+			<div style="width:85vw; float:left;">
+				<marquee onmouseover="this.stop()" onmouseout="this.start()"></marquee>
+
+			</div>
+			<div class="scroll-to-top">
+				<i class="icon-arrow-up"></i>
+			</div>
+		</div>
+		<!-- END FOOTER -->
+		<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+		<!-- BEGIN CORE PLUGINS -->
+		<!--[if lt IE 9]>
+<script src="http://192.168.0.212:8080/tmcs/assets/global/plugins/respond.min.js"></script>
+<script src="http://192.168.0.212:8080/tmcs/assets/global/plugins/excanvas.min.js"></script> 
+<![endif]-->
+		<script src="./系統範例社區 全方位建築智慧化管理系統_files/jquery.min.js" type="text/javascript"></script>
+		<script src="./系統範例社區 全方位建築智慧化管理系統_files/jquery-migrate.min.js" type="text/javascript"></script>
+		<!-- IMPORTANT! Load jquery-ui.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+		<script src="./系統範例社區 全方位建築智慧化管理系統_files/jquery-ui.min.js" type="text/javascript"></script>
+		<script src="./系統範例社區 全方位建築智慧化管理系統_files/bootstrap.min.js" type="text/javascript"></script>
+		<script src="./系統範例社區 全方位建築智慧化管理系統_files/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+		<script src="./系統範例社區 全方位建築智慧化管理系統_files/jquery.slimscroll.min.js" type="text/javascript"></script>
+		<script src="./系統範例社區 全方位建築智慧化管理系統_files/jquery.blockui.min.js" type="text/javascript"></script>
+		<script src="./系統範例社區 全方位建築智慧化管理系統_files/jquery.cokie.min.js" type="text/javascript"></script>
+		<script src="./系統範例社區 全方位建築智慧化管理系統_files/jquery.uniform.min.js" type="text/javascript"></script>
+		<script src="./系統範例社區 全方位建築智慧化管理系統_files/bootstrap-switch.min.js" type="text/javascript"></script>
+		<!-- END CORE PLUGINS -->
+		<!-- END PAGE LEVEL PLUGINS -->
+		<!-- BEGIN PAGE LEVEL SCRIPTS -->
+		<script src="./系統範例社區 全方位建築智慧化管理系統_files/app.js" type="text/javascript"></script>
+		<script src="./系統範例社區 全方位建築智慧化管理系統_files/layout.js" type="text/javascript"></script>
+		<script src="./系統範例社區 全方位建築智慧化管理系統_files/demo.js" type="text/javascript"></script>
+		<script src="./系統範例社區 全方位建築智慧化管理系統_files/quick-sidebar.min.js" type="text/javascript"></script>
+		<script src="./系統範例社區 全方位建築智慧化管理系統_files/lrz.bundle.js" type="text/javascript"></script>
+		<script src="./系統範例社區 全方位建築智慧化管理系統_files/tasks.js" type="text/javascript"></script>
+		<script src="./系統範例社區 全方位建築智慧化管理系統_files/toastr.min.js" type="text/javascript"></script>
+		<!-- END PAGE LEVEL SCRIPTS -->
+		<script>
+			jQuery(document).ready(function ($) {
+
+				// site preloader -- also uncomment the div in the header and the css style for #preloader
+				$(window).load(function () {
+					$('#preloader').fadeOut('slow');
+				});
+
+			});
+
+			jQuery(document).ready(function () {
+				toastr.options = {
+					"closeButton": true,
+					"debug": false,
+					"newestOnTop": false,
+					"progressBar": true,
+					"positionClass": "toast-top-right",
+					"preventDuplicates": false,
+					"onclick": null,
+					"showDuration": "300",
+					"hideDuration": "1000",
+					"timeOut": "5000",
+					"extendedTimeOut": "1000",
+					"showEasing": "swing",
+					"hideEasing": "linear",
+					"showMethod": "fadeIn",
+					"hideMethod": "fadeOut"
+				}
+
+			});
+
+			$(document).ready(function () {
+				$('.dropdown-menu').parent().on('shown.bs.dropdown', function () {
+					var $menu = $("ul", this);
+					offset = $menu.offset();
+					position = $menu.position();
+					$('body').append($menu);
+					$menu.show();
+					$menu.css('position', 'absolute');
+					$menu.css('top', (offset.top) + 'px');
+					$menu.css('left', (offset.left) + 'px');
+					$menu.css('width', '150px');
+					$(this).data("myDropdownMenu", $menu);
+				});
+
+				$('.dropdown-menu').parent().on('hide.bs.dropdown', function () {
+					$(this).append($(this).data("myDropdownMenu"));
+					$(this).data("myDropdownMenu").removeAttr('style');
+				});
+			});
+		</script>
+		<!--SocketIO Using JavaScript-->
+		<script src="./系統範例社區 全方位建築智慧化管理系統_files/web_socket.js"></script>
+		<script type="text/javascript">
+			var ws, client_list = {};
+			var name = '1';
+			$(document).ready(function () {
+				connect();
+			});
+
+			// 连接服务端
+			function connect() {
+				// 创建websocket
+				ws = new WebSocket("ws://192.168.0.200:7272");
+				// 当socket连接打开时，输入用户名
+				ws.onopen = onopen;
+				// 当有消息时根据消息类型显示不同信息
+				ws.onmessage = onmessage;
+				ws.onclose = function () {
+					console.log("關閉連線，等待重新嘗試");
+					connect();
+				};
+				ws.onerror = function () {
+					console.log("出現錯誤");
+				};
+			}
+
+			// Send Login Message on connected.
+			function onopen() {
+				// Login
+				var login_data = '{"type":"login","client_uid":"' + name + '","com_id":"tmcs"}';
+				console.log("WebSocket shakehand success:" + login_data);
+				ws.send(login_data);
+			}
+
+			// 服务端发来消息时
+			function onmessage(e) {
+				//console.log(e.data);
+				var data = eval("(" + e.data + ")");
+				switch (data['type']) {
+					// 服务端ping客户端
+					case 'ping':
+						ws.send('{"type":"pong"}');
+						break;;
+					// 登录 更新用户列表
+					// case 'login':
+					//     //{"type":"login","client_id":xxx,"client_uid":"xxx","client_list":"[...]","time":"xxx"}
+					//     //say(data['client_id'], data['client_uid'],  data['client_uid']+' 加入了聊天室', data['time']);
+					//     toastr['info'](data['client_uid']+' 連線成功');
+					//     if(data['client_list']){
+					//         client_list = data['client_list'];
+					//     }else{
+					//         client_list[data['client_id']] = data['client_uid']; 
+					//     }
+					//     //flush_client_list();
+					//     console.log(data['client_uid']+"登录成功");
+					//     break;
+					// 发言
+					case 'say':
+						//{"type":"say","from_client_id":xxx,"to_client_id":"all/client_id","content":"xxx","time":"xxx"}
+						//say(data['from_client_id'], data['from_client_uid'], data['content'], data['time']);
+						toastr['success'](data['from_client_uid'] + ':' + data['content']);
+						break;
+					// 用户退出 更新用户列表
+					// case 'logout':
+					//     //{"type":"logout","client_id":xxx,"time":"xxx"}
+					//     //say(data['from_client_id'], data['from_client_uid'], data['from_client_uid']+' 退出了', data['time']);
+					//     toastr['warning'](data['client_uid']+' 離線');
+					//     delete client_list[data['from_client_id']];
+					//     break;
+					//flush_client_list();
+					case 'system':
+						// toastr[data['level']](data['content']);
+						break;
+				}
+			}
+		</script>
+		<!-- ImageCheck-->
+		<script>
+
+			//判斷登入者是否為唯讀帳號，如果是，關閉所有按鈕功能
+			if ($("#readonly").val() === "readonly") {
+				$(':button').prop('disabled', true);
+				//$('.btn').prop('disabled', true);
+			}
+
+			//判斷封面圖檔解析度必須小於640*480
+			if (document.getElementById('cover_img')) {
+				document.querySelector('#cover_img').addEventListener('change', function () {
+					lrz(this.files[0], {
+						width: 680
+					})
+						.then(function (rst) {
+							// 处理成功会执行
+							//console.log(rst);
+							var data = "";
+							data = rst.origin.name + ',' + rst.base64;
+							$('#compressed_cover').val(data);
+
+						})
+						.catch(function (err) {
+							$('#compressed_cover').val('');
+						})
+				});
+			};
+
+			$('#cover_reset').click(function () {
+				$('.cover_img').fileinput('clear');
+				$("div.cover").removeClass('has-error');
+				$("#upload-error").remove();
+
+			});
+
+			//附件格式錯誤時 刪除class (.has-error) 該欄位並不是required
+			$('#file_reset').click(function () {
+				$('.file').fileinput('clear');
+				$("div.file").removeClass('has-error');
+				$("#upload-error").remove();
+
+			});
+		</script>
+
+
+
+		<!-- END JAVASCRIPTS -->
+
+		<!-- END BODY -->
+
+
+	</div>
+</body>
+
+</html>

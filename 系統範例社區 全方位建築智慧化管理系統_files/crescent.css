@@ -1,0 +1,618 @@
+html{
+    color:#707070;
+}
+body{
+    color:#707070!important;
+}
+
+/* 清除樣式 */
+ul{
+    list-style-type:none;
+    padding-inline-start:0!important;
+}
+a{
+    text-decoration: none!important;
+}
+/* 清除樣式 */
+
+/*  取消奇怪錯誤 START */
+.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio]{
+    position: absolute;
+    margin-top: 0px!important;
+    margin-left: -8px!important;
+}
+
+/* 修復row margin */
+.fixRow{
+    margin-right: 0px!important;
+    margin-left: 0px!important;
+}
+
+.textLeft{
+    text-align: left!important;
+}
+/* 取消奇怪錯誤 END */
+
+/* bootstrap  START */
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+  border-color: #653320;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #653320;
+  outline: 0 none;
+}
+
+/* 表格背景顏色 */
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th { background-color: #F4F0EA; } 
+
+/* bootstrap END */
+
+/* 大分頁背景 */
+.page-content {
+    margin-top: 0px;
+    padding: 0px;
+    background: #f0f2f5!important
+}
+.page-bar{
+    background: white!important
+}
+
+/* 分頁背景 */
+/* 大分頁背景內 子頁 標題 麵包屑 按鈕 背景 */
+.backgroundBorder{
+    display:flex;
+    /* align-items:center; */
+    width: 100%;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    background:white;
+    margin-bottom: 17px;
+    padding:7px 9px 9px;
+}
+.bgBorder{
+    display:flex;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    background:white;
+    margin-bottom: 17px;
+    padding:7px 9px 9px;
+}
+.searchBackground{
+    display:flex;
+    width: 100%;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    background:white;
+    margin-bottom: 17px;
+    padding:15px 20px 15px;
+}
+/* 表格樣式2 */
+.borderBackground2{
+    border: 1px solid #BEBEBE;
+    border-radius: 5px;
+    margin-bottom:10px;
+}
+
+.content2{
+    padding: 0 30px;
+    margin:16px 0 10px 0;
+}
+.content3{
+    padding: 0 15px;
+    margin:10px 0 10px 0!important;
+}
+.marginRight10{
+    margin-right:10px!important;
+}
+.paddingRightLeft20{
+    padding:0 20px;
+}
+.rowPadding {
+    padding: 0px 30px;
+}
+.alignSelf{
+    align-self:flex-start;
+}
+/* 表格樣式2 */
+
+/* 標題 */
+.page-title{
+    color: #36302D!important;
+    font-family: Roboto-Medium!important;
+    font-size: 20px!important;
+    line-height: 20px!important;
+    font-weight: 700!important;
+    margin-bottom: 20px!important;
+}
+
+.BrownTitle{
+    color: #653320;
+    font-weight: 700;
+}
+
+.title2{
+    color:#653320;
+    padding:11px;
+    border-bottom: 1px #BEBEBE solid;
+}
+/* 標題 */
+
+/* 按鈕 */
+.btnDelete{
+    outline: 0 none!important;
+    border-radius: 4px!important;
+    border: none!important;
+    text-transform:none!important;
+    background:#CC4747!important;
+    color:white;
+}
+.btnAdd{
+    outline: 0 none!important;
+    border-radius: 4px!important;
+    border: none!important;
+    text-transform:none!important;
+    background:#653320!important;
+    color:white;
+}
+
+/* 主題按鈕 棕色 */
+.primaryBtn{
+    padding:12px!important;
+    border: none!important;
+    border-radius: 4px!important;
+    outline: 0 none!important;
+    height: 38px!important;
+    width: max-content!important;
+    font-size: 14px!important;
+    line-height:14px!important;
+    font-weight: 400!important;
+    text-transform:none!important;
+    white-space: nowrap;
+    background:#653320!important;
+    color:white!important;
+}
+.primaryBtn:hover , .primaryBtn:focus{
+    background:#854e39!important;
+    color:white!important;
+}
+/* 主題按鈕 灰色*/
+.grayBtn{
+    padding:12px!important;
+    border: none!important;
+    border-radius: 4px!important;
+    outline: 0 none!important;
+    height: 38px!important;
+    width: max-content!important;
+    font-size: 14px!important;
+    line-height:14px!important;
+    font-weight: 400!important;
+    text-transform:none!important;
+    white-space: nowrap;
+    background:#6F6F6F!important;
+    color:white!important;
+}
+.grayBtn:hover , .grayBtn:focus{
+    background:#969696!important;
+    color:white!important;
+}
+/* 主題按鈕 藍色*/
+.blueBtn{
+    padding:12px!important;
+    border: none!important;
+    border-radius: 4px!important;
+    outline: 0 none!important;
+    height: 38px!important;
+    width: max-content!important;
+    font-size: 14px!important;
+    line-height:14px!important;
+    font-weight: 400!important;
+    text-transform:none!important;
+    white-space: nowrap;
+    background:#1C45EF!important;
+    color:white!important;
+}
+.blueBtn:hover , .blueBtn:focus{
+    background:#355dff!important;
+    color:white!important;
+}
+
+
+/* 按鈕 */
+
+/* 輸入框 */
+input{
+    color:#969696!important;
+    background-color: white!important;
+    border: 1px solid #969696!important;
+    border-radius: 4px!important;
+    padding:4px 11px;
+    height: 34px!important;
+}
+input:hover , input:focus {
+    background-color: white!important;
+    border: 1px solid #653320!important;
+    box-shadow: none !important;
+}
+input:active {
+    border: 1px solid #653320!important;
+}
+
+select{
+    background-color: white!important;
+    border: 1px solid #969696!important;
+}
+select:hover , select:focus {
+    background-color: white!important;
+    border: 1px solid #653320!important;
+    box-shadow: none !important;
+}
+select:active {
+    border: 1px solid #653320!important;
+}
+
+textarea{
+    background-color: white!important;
+    border: 1px solid #969696!important;
+}
+textarea:hover , textarea:focus {
+    background-color: white!important;
+    border: 1px solid #653320!important;
+    box-shadow: none !important;
+}
+textarea:active {
+    border: 1px solid #653320!important;
+}
+/* 輸入框 */
+
+/* 表格 */
+.tableBackgroundBrown{
+    background:#F4F0EA!important;
+}
+.tableBackgroundWhite{
+    background:white!important;
+}
+/* 表格 */
+
+/* 標籤頁 */
+    /* 標籤頁 標題顏色  */
+    .colorBlack{
+        color:#524944;
+    }
+/* 標籤頁 */
+
+/* 其他樣式 */
+.aColorWhite{
+    color:white!important;
+}
+.whiteSpace{
+    white-space: nowrap
+}
+.resizeNone{
+    resize:none;
+}
+/* 其他樣式 */
+
+/* 鼠標 */
+
+.cursorPointer{
+    cursor:pointer;
+}
+/* 鼠標 */
+
+
+
+
+/* ---------------------一般排版功能----------------------- */
+/* 分行線 */
+.line{
+    background:#70707036;
+    margin-bottom:20px;
+    height: 1px;
+    width: 100%;
+}
+
+.width100px{
+    width: 100px;
+}
+.width150px{
+    width: 150px;
+}
+
+.width10{
+    width: 10%!important;
+}
+.width15{
+    width: 15%!important;
+}
+.width20{
+    width: 20%!important;
+}
+.width20_r10_b10{
+    width: calc(20% - 10px)!important;
+    margin-right:10px;
+    margin-bottom:10px;
+}
+.width25{
+    width: 25%!important;
+}
+.width25_r10_b10{
+    width: calc(25% - 10px)!important;
+    margin-right:10px;
+    margin-bottom:10px;
+}
+.width30{
+    width: 30%!important;
+}
+.width40{
+    width: 40%!important;
+}
+.width45{
+    width: 45%!important;
+}
+.width48{
+    width: 48%!important;
+}
+.width50{
+    width: 50%!important;
+}
+.width75{
+    width: 75%!important;
+}
+.width100{
+    width: 100%!important;
+}
+.objectFill{
+    object-fit:fill;
+}
+.width50px {
+    width: 50px !important;
+    margin: 0 !important;
+}
+.lineHeight16{
+    line-height: 16px !important;
+}
+.lineHeight20{
+    line-height: 20px !important;
+}
+.lineHeight38{
+    line-height: 38px !important;
+}
+.lineHeight46{
+    line-height: 46px;
+}
+
+
+.fontSize12 {
+    font-size: 12px;
+    line-height: 12px;
+}
+.fontSize14{
+    font-size:14px;
+    line-height: 14px;
+}
+.fontSize16 {
+    font-size: 16px;
+    line-height: 16px;
+}
+.fontSize18 {
+    font-size: 18px;
+    line-height: 18px;
+}
+.fontSize20 {
+    font-size: 20px;
+    line-height: 20px;
+}
+.fontSize26 {
+    font-size: 26px;
+    line-height: 26px;
+}
+
+.fontWeight {
+    font-weight: 700;
+}
+
+
+
+.textCenter{
+    text-align: center;
+}
+.textEnd{
+    text-align: end;
+}
+
+.flex{
+    display:flex;
+}
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flexCenterStart {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.flexCenterAlignCenter {
+    display: flex;
+    align-items: center;
+}
+.flexCenterLine {
+    display: flex;
+    justify-content: center;
+}
+.flexColumn{
+    display:flex;
+    flex-direction: column;
+}
+.flexColumnStart{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.flexStartCenterColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flexCenterColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.flexAllCenterColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.flexEnd{
+    display:flex;
+    justify-content: flex-end;
+}
+.flexSpaceBetween{
+    display:flex;
+    justify-content:space-between;
+}
+
+.flexAlignSelfEnd{
+    align-self: flex-end
+}
+.flexWrap{
+    display:flex;
+    flex-wrap: wrap;
+}
+.flexNoWrap{
+    display:flex;
+    flex-wrap:nowrap;
+}
+
+.marginRight3 {
+    margin-right: 3px;
+}
+.marginRight6 {
+    margin-right: 6px;
+}
+.marginRight10{
+    margin-right:10px;
+}
+.marginRight15{
+    margin-right:15px;
+}
+.marginRight20{
+    margin-right:20px;
+}
+.marginRight30{
+    margin-right:30px;
+}
+.marginRight40{
+    margin-right:40px;
+}
+
+.marginLeft5 {
+    margin-left: 5px;
+}
+.marginLeft12 {
+    margin-left: 12px;
+}
+.marginBottom4{
+    margin-bottom:4px;
+}
+.marginBottom8{
+    margin-bottom:8px;
+}
+.marginBottom10{
+    margin-bottom:10px!important;
+}
+.marginBottom14{
+    margin-bottom:14px!important;
+}
+.marginBottom20{
+    margin-bottom:20px!important;
+}
+.marginBottom35{
+    margin-bottom:35px;
+}
+.marginTop2{
+    margin-top:2px;
+}
+.marginTop3{
+    margin-top:3px;
+}
+.marginTop4{
+    margin-top:4px;
+}
+.marginTop7{
+    margin-top:7px;
+}
+.marginTop8{
+    margin-top:8px;
+}
+.marginTop16{
+    margin-top:16px;
+}
+.marginRightBottom14{
+    margin-right:14px;
+    margin-bottom:14px;
+}
+
+.padding4 {
+    padding: 4px !important;
+}
+.padding20 {
+    padding: 20px ;
+}
+.padding30 {
+    padding: 30px ;
+}
+
+.paddingRight20{
+    padding-right:20px;
+}
+.paddingRightLeft15{
+    padding:0 15px;
+}
+.paddingRightLeft20{
+    padding:0 20px;
+}
+
+.paddingTop16{
+    padding-top:16px
+}
+
+.paddingLeft2 {
+    padding-left: 2px !important;
+}
+.paddingLeft10 {
+    padding-left: 10px !important;
+}
+.paddingRightBottom14{
+    padding-right:14px;
+    padding-bottom:14px;
+}
+
+
+/* 布局 */
+
+
+
+
+
+
+
+
